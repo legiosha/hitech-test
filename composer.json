@@ -1,0 +1,15 @@
+{
+    "name": "legiosha/phone-validation",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Legiosha\\PhoneValidation\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "--"
+        }
+    ],
+    "require": {}
+}

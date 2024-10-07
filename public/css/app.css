@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-common {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 280px;
+    min-width: 190px;
+    width: 88%;
+    max-height: 280px;
+    height: 60%;
+    background-color: antiquewhite;
+    padding: 15px;
+    border-radius: 16px;
+}
+.form-common-content {
+    text-align: center;
+    width: 100%;
+}
+.input-container {
+    margin-bottom: 12px;
+}
+.input-common {
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+    height: 32px;
+    text-align: center;
+}
+.input-common::placeholder {
+    color: grey;
+    text-align: center;
+    opacity: 1;
+}
+.input-code {
+    width: 60% !important;
+    margin-right: 10px;
+}
+.input-common::-ms-input-placeholder { /* Edge 12 -18 */
+    color: grey;
+    text-align: center;
+}
+.phone_input-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-send {
+    height: 35px;
+    width: 70%;
+    border-radius: 12px;
+    border: none;
+    background-color: aquamarine;
+    color: #FFF;
+    font-weight: bold;
+}
+.btn-send:hover {
+    background-color: #0056b3;
+}
+.btn-send i {
+    margin-right: 10px;
+    display: none;
+}
+.btn-active i{
+    display: inline-block !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.error {
+    width: 100%;
+    padding: 0;
+
+    font-size: 80%;
+    color: #900;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
+}
