@@ -5,7 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function onPhoneCheck(response) {
     document.querySelector("#btn").classList.remove("btn-active")
     if (response.status === "OK") {
-        alert("Ваш номер телефона относится к стране: " + response.country)
+        if (response.country) {
+            alert("Ваш номер телефона относится к стране: " + response.country)
+        } else {
+            alert("Страна с введенным кодом отсутсвует в справочнике")
+        }
     } else {
         alert("Ошибка: " + response.description)
     }
@@ -22,11 +26,11 @@ function fetch() {
         evt.preventDefault()
         let form = document.querySelector("#ajax_form")
         form.querySelector("#btn").classList.add("btn-active")
-            let request = {
-                method: "POST",
-                url: "/phone/check",
-                data: new FormData(document.querySelector("#ajax_form")),
-            }
-            send(request, onPhoneCheck, onError)
+        let request = {
+            method: "POST",
+            url: "/phone/check",
+            data: new FormData(document.querySelector("#ajax_form")),
+        }
+        send(request, onPhoneCheck, onError)
     })
 }

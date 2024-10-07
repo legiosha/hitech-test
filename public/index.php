@@ -1,6 +1,6 @@
 <?php
 
-define('__ROOT__', dirname(__FILE__, 1).'/src');
+define('__ROOT__', dirname(__FILE__, 2).'/src');
 
 require '../vendor/autoload.php';
 
